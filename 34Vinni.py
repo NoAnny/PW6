@@ -10,8 +10,8 @@
 
 
 def rythm(words):
-    poem = words.lower().split() # переведем строку в список из фраз, где каждая фраза будет отдельным элементом
-    f = lambda x: sum(1 for i in x if i in 'аоуыэеёиюя') #функция просуммирует в каждом элементе гласные
+    poem = words.lower().split()
+    f = lambda x: sum(1 for i in x if i in 'аоуыэеёиюя')
     vowels = f(poem[0])
     if all([f(i) == vowels for i in poem]):
         return 'Парам пам-пам'
